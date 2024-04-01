@@ -57,11 +57,12 @@ public class ScreenshotAndScroll extends BaseClass {
 
     @Test
     public void scrollByNumberPrac() throws InterruptedException, IOException {
+        driver.manage().window().maximize();
         driver.get("https://www.amazon.com");
         Thread.sleep(2000);
-        //driver.manage().window().maximize();
 
-        scrollByNumber(0,1000);
+
+        scrollByNumber(0,2000);
         Thread.sleep(5000);
 
     }

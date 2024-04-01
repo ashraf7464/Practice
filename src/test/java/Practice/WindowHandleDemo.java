@@ -7,7 +7,7 @@ import org.testng.annotations.Test;
 
 import java.util.Set;
 
-public class windowHandleDemo extends BaseClass {
+public class WindowHandleDemo extends BaseClass {
 
     String primaryWindow;
     String newWindow;
@@ -16,7 +16,7 @@ public class windowHandleDemo extends BaseClass {
 
         driver.get("https://www.rahulshettyacademy.com/AutomationPractice/");
         driver.manage().window().maximize();
-        primaryWindow= driver.getWindowHandle();
+        primaryWindow= driver.getWindowHandle();        //primaryWindowID =ABC123
         System.out.println("Primary window: "+primaryWindow);
     }
 
@@ -28,16 +28,16 @@ public class windowHandleDemo extends BaseClass {
     @Test (priority = 3)
     public void getWindowHandles() throws InterruptedException {
 
-        Set<String> windowHandles= driver.getWindowHandles();
+        Set<String> windowHandles= driver.getWindowHandles();   //primaryWindowID =ABC123
+                                                                //newWindowID=XYZ345
 
         System.out.println(windowHandles);
 
-        for(String windowHandle: windowHandles){
+        for(String windowHandle: windowHandles) {
             if(!primaryWindow.equals(windowHandle)){
                 driver.switchTo().window(windowHandle);
-                newWindow=windowHandle; // For checking
+                newWindow=windowHandle;
             }
-
         }
         System.out.println(newWindow); // For checking
     }

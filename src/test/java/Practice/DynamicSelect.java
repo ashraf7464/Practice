@@ -19,20 +19,33 @@ public class DynamicSelect extends BaseClass {
     public void dynamicSelect() throws InterruptedException {
 
 
+        driver.manage().window().maximize();
         driver.get("https://www.rahulshettyacademy.com/AutomationPractice/");
 
-        WebElement dropDown = driver.findElement(By.xpath("//input[@id='autocomplete']"));
+      WebElement dropDown = driver.findElement(By.xpath("//input[@id='autocomplete']"));
         dropDown.sendKeys("uni");
+
+        Thread.sleep(3000);
+
          List<WebElement> elements = driver.findElements(By.xpath("//li[@class='ui-menu-item']"));
 
          for(WebElement element:elements){
-             if(element.getText().contains("Kingdom")){
+             if(element.getText().contains("Islands")){
+                 System.out.println(element.getText());
                  element.click();
                  break;
-                 //Thread.sleep(5000);
-
              }
          }
+     /*
+         for(int i=0; i<elements.size(); i++){
+             if(elements.get(i).getText().contains("Kingdom")){
+                 String element = elements.get(i).getText();
+                 elements.get(i).click();
+                 System.out.println(element);
+             }
+         }
+*/
+         Thread.sleep(3000);
 
     }
 

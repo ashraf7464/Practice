@@ -12,7 +12,12 @@ public class BaseClass extends CommonUtilities{
     @BeforeClass
     public void driverInitialization(){
 
-        WebDriverManager.edgedriver().setup();
+//        WebDriverManager.edgedriver().setup();
+//        EdgeOptions options = new EdgeOptions();
+//        options.addArguments("--guest");
+//        driver = new EdgeDriver(options);
+
+        System.setProperty("webdriver.edge.driver", "D:\\msedgedriver.exe");
         EdgeOptions options = new EdgeOptions();
         options.addArguments("--guest");
         driver = new EdgeDriver(options);

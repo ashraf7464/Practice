@@ -47,6 +47,28 @@ public class StringFunction {
 
     }
 
+    @Test
+    public void charOccurrences1() {
+        String name = "Md Ashraf Siddique";
+        String name1 = name.replace(" ", "").toLowerCase();
+        char [] chars = name1.toCharArray();
+
+        Set<Character> uniqueChars = new HashSet<>();
+        for (char c : chars) {
+            if(!uniqueChars.contains(c)){
+                uniqueChars.add(c);
+                int count=0;
+                for(char ch: chars)
+                    if (ch == c) {
+                        count++;
+                    }
+
+                System.out.println("Character " + c + " appears " + count + " times.");
+            }
+        }
+
+    }
+
 
     @Test
     public void splitString(){
@@ -67,6 +89,7 @@ public class StringFunction {
     public void purseInteger(){
         String str = "MD87ASH56RAF123";
         String intValue = str.replaceAll("[^0-9]","");
+        System.out.println(intValue);
         int result = Integer.parseInt(intValue);
         System.out.println(result);
     }

@@ -13,26 +13,28 @@ public class MouseKeyboardActions extends BaseClass {
     @Test
     public void mouseHover() throws InterruptedException {
 
-        driver.get("https://www.rahulshettyacademy.com/AutomationPractice/");
         driver.manage().window().maximize();
+        driver.get("https://www.rahulshettyacademy.com/AutomationPractice/");
+
 
         WebElement mouseHoverButton = driver.findElement(By.xpath("//button[@id='mousehover']"));
         scrollIntoView(mouseHoverButton);
         //Actions action = new Actions(driver);
 
-
+        Thread.sleep(3000);
         new Actions(driver).moveToElement(mouseHoverButton).perform();
 
 
         Thread.sleep(3000);
 
         WebElement dropDownBox = driver.findElement(By.xpath("//select[@id='dropdown-class-example']"));
-        scrollIntoView(dropDownBox);
+        //scrollIntoView(dropDownBox);
         new Actions(driver).moveToElement(dropDownBox).click().build().perform();
+        Thread.sleep(3000);
 
     }
 
-    @Test
+    @Test()
     public void pressKeys() throws InterruptedException {
         driver.get("https://www.saucedemo.com/v1/");
         driver.manage().window().maximize();

@@ -8,7 +8,7 @@ public class StringBuilderBuffer {
 
     @Test
     public void fourthLetter(){
-        String fourthLetter = String.valueOf(name.charAt(4));
+        String fourthLetter = String.valueOf(name.charAt(3));
         System.out.println(fourthLetter);
     }
     @Test
@@ -59,6 +59,8 @@ public class StringBuilderBuffer {
         String [] words = str.split(" ");
 
         StringBuilder reverseWords = new StringBuilder();
+//        reverseWords.reverse();
+//        System.out.println(reverseWords);
 
         for(int i=words.length-1; i>=0; i--){
             reverseWords=reverseWords.append(words[i]);

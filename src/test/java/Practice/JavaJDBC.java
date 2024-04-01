@@ -1,8 +1,5 @@
 package Practice;
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.ResultSet;
-import java.sql.Statement;
+import java.sql.*;
 
 /*
 1. Register the Driver class
@@ -12,15 +9,17 @@ import java.sql.Statement;
 5. Close connection
  */
 public class JavaJDBC {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws ClassNotFoundException, SQLException {
         String dbURL = "jdbc:mysql://localhost:3306/hr";
         String userName = "root";
         String password = "admin";
-        try {
+
+         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
             Connection connection = DriverManager.getConnection(dbURL,userName,password);
             Statement statement = connection.createStatement();
             ResultSet resultSet = statement.executeQuery("select * from employees where last_name like 'S%'");
+
             while (resultSet.next()) {
                 int employeeID = resultSet.getInt("EMPLOYEE_ID");
                 String firstName = resultSet.getString("FIRST_NAME");
@@ -31,5 +30,6 @@ public class JavaJDBC {
         } catch (Exception e) {
             System.out.println(e);
         }
+
     }
 }
