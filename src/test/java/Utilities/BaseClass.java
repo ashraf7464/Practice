@@ -1,5 +1,6 @@
 package Utilities;
 
+
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.edge.EdgeOptions;
@@ -12,15 +13,16 @@ public class BaseClass extends CommonUtilities{
     @BeforeClass
     public void driverInitialization(){
 
-//        WebDriverManager.edgedriver().setup();
-//        EdgeOptions options = new EdgeOptions();
-//        options.addArguments("--guest");
-//        driver = new EdgeDriver(options);
-
-        System.setProperty("webdriver.edge.driver", "D:\\msedgedriver.exe");
+        WebDriverManager.edgedriver().setup();
         EdgeOptions options = new EdgeOptions();
         options.addArguments("--guest");
         driver = new EdgeDriver(options);
+
+
+        /*System.setProperty("webdriver.edge.driver", "D:\\msedgedriver.exe");
+        EdgeOptions options = new EdgeOptions();
+        options.addArguments("--guest");
+        driver = new EdgeDriver(options);*/
 
     }
 
@@ -28,5 +30,7 @@ public class BaseClass extends CommonUtilities{
     public void tearDown(){
 
         driver.close();
+
+
     }
 }

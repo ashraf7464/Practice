@@ -10,12 +10,18 @@ public class StringIsImutable {
     public void stringIsImutable() {
 
 
-        String a="hello"; //leteral way  //string pool memory
+        String a="hello"; //literal way  //string pool memory
+
+
         String b="hello";
+
+        a.concat("World");
+
+        System.out.println(a);
         String x="hello";
         String a1="hi";
 
-        String c = new String("hello");
+        String c = new String("hello"); // normal
         String d = new String("hello");
 
         //System.out.println(x);

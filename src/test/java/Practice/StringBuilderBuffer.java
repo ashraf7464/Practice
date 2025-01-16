@@ -6,32 +6,36 @@ public class StringBuilderBuffer {
 
     String name = "Md Ashraf Siddique";
 
-    @Test
-    public void fourthLetter(){
-        String fourthLetter = String.valueOf(name.charAt(3));
-        System.out.println(fourthLetter);
-    }
+
     @Test
     public void append(){
 
         String name2 = "Md Ashraf Siddique";
-        StringBuilder sb = new StringBuilder();
+        StringBuffer sb = new StringBuffer();
         sb.append(name2+" Siddique");
-        sb.append(" Siddique");
+        sb.append(" Farzana");
         System.out.println(sb);
+
+
+        String name3 = "Farzana";
+        StringBuilder sb2 = new StringBuilder();
+        sb2.append(name3+" Haritha");
+        sb2.append(" Farzana");
+        System.out.println(sb2);
+
 
     }
 
     @Test
     public void insert(){
         StringBuilder sb = new StringBuilder(name);
-        sb.insert(10,"Md ");
+        sb.insert(10,"Md ABCD ");
         System.out.println(sb);
     }
 
     @Test
     public void replace(){
-
+        //"Md Ashraf Siddique"
         StringBuilder sb = new StringBuilder(name);
         sb.replace(3,9,"Asif");
         System.out.println(sb);

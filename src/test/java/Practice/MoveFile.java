@@ -13,7 +13,7 @@ public class MoveFile {
     public void moveFile() throws IOException, InterruptedException {
 
         File f1 = new File("C:\\Users\\conne\\Downloads\\xyz.txt");
-        File f2 = new File("D:\\MoveToThisFolder\\xyz.txt");
+        File f2 = new File("D:\\MoveToThisFolder\\");
 
         FileUtils.moveFile(f1,f2);
         //f1.delete();

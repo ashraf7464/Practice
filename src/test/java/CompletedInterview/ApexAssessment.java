@@ -8,7 +8,8 @@ public class ApexAssessment {
         Scanner scanner = new Scanner(System.in);
 
         System.out.println("Enter a sentence:");
-        String input = scanner.nextLine(); // Read user input
+        String input = scanner.nextLine();
+        // Read user input
 
         String longestWord = findLongestWord(input);
         String reverseLongestWord = new StringBuilder(longestWord).reverse().toString();

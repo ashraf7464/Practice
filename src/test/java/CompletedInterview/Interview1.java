@@ -26,7 +26,6 @@ public class Interview1 {
         driver.manage().window().maximize();
         driver.get("https://www.saucedemo.com/v1/");
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
-
     }
 
     public void login() {

@@ -11,9 +11,9 @@ public class ArrayAndArrayList {
     @Test
     public void array() {
 
-        String[] name = {"ashraf", "tashrif", "bushra", "abid"};
-
+        String[] name = {"ashraf", "tashrif", "bushra", "abid", "Ashique"};
         System.out.println(name[1]);    //Print array object by index
+        //System.out.println(name);
         System.out.println(Arrays.toString(name));  //Print the array
 
         System.out.println(name.length);    //Length of array
@@ -26,32 +26,45 @@ public class ArrayAndArrayList {
             System.out.println(name1);
         }
 
+        System.out.println(name[100]);
+
     }
 
     @Test
     public void arrayToArrayList() {
         String[] name = {"ashraf", "tashrif", "bushra", "abid"};
 
+
+
         //name.add("Mishu"); //Doesn't work, array is fixed
         System.out.println(Arrays.toString(name));  //How to print array
 
-        ArrayList<String> name1 = new ArrayList<>();
+        ArrayList<String> name1 = new ArrayList<>(); //Empty
         //ArrayList<String> name1 = new ArrayList<>(Arrays.asList("ashraf", "tashrif", "bushra", "abid"));
-
 
         for (int i = 0; i < name.length; i++) {
             name1.add(name[i]);
         }
+
+        System.out.println(name1);
+
         name1.add("Mishu");
+        System.out.println(name1);
+        name1.add(1,"Tamim");
         System.out.println(name1);  //How to print ArrayList, .toString() method automatically invoked for ArrayList
-        System.out.println(name1.get(0));
+        name1.remove(1);
+        name1.remove("Mishu");
+        System.out.println(name1);
+        System.out.println(name[1]);
+        System.out.println(name1.get(1));
+        System.out.println(name1.size());
 
     }
 
     @Test
     public void evenAndOddNumber() {
         int[] number = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10}; //array
-
+        System.out.println(number[11]);
         for (int i = 0; i < number.length; i++) {
             if (number[i] % 2 == 0) {
                 System.out.println(number[i] + " is an even number");
@@ -79,8 +92,14 @@ public class ArrayAndArrayList {
         }
         System.out.println("Total sum of array is: " + sum);
 
+        System.out.println("This is the Avg: "+sum/number.length);
+
+
         double avg = (double) sum / number.length;
-        System.out.println("Array avg is: " + avg);
+        System.out.println("Array avg in double is: " + avg);
+
+        float avgg = (float) sum/number.length;
+        System.out.println("Array avg in float is: " + avgg);
 
         ArrayList<Integer> list = new ArrayList<>(Arrays.asList(1, 2, 3, 4, 5, 6, 7, 8, 9, 13, 12));
 
@@ -108,6 +127,7 @@ public class ArrayAndArrayList {
         System.out.println(list);
 
         list.remove(1);
+        list.remove(Integer.valueOf(300));
 
         System.out.println(list);
     }
@@ -117,12 +137,11 @@ public class ArrayAndArrayList {
         int[] number = {1, 2, 3, 3, 4, 4, 5, 6, 7, 8, 9, 9, 9, 13, 12};
         //HashSet<Integer> set = new HashSet<>(Arrays.asList(number));
 
-        ArrayList<Integer> list = new ArrayList<>(Arrays.asList(1, 2, 3, 3, 4, 4, 5, 6, 7, 8, 9, 9, 13, 12));
-        HashSet<Integer> set1 = new HashSet<>(list);
-        System.out.println("Before duplicate removed: " + list);
-        System.out.println("After duplicate removed: " + set1);
+        ArrayList<Integer> list = new ArrayList<>(Arrays.asList(1, 2, 3, 3, 4, 4, 5, 6, 7, 8, 9, 9, 13, 12, 13, 12, 13, 12));
+        //1, 2, 3, 3, 4, 4, 5, 6, 7, 8, 9, 9, 13, 12
+        //1, 2, 3, 4, 4, 5, 6, 7, 8, 9, 9, 13, 12
 
-        for (int i = 0; i < list.size(); i++) {
+        for (int i = 0; i < list.size(); i++) {   //1,2
             for (int j = i + 1; j < list.size(); j++) {
                 if (list.get(i).equals(list.get(j))) {
                     list.remove(j);
@@ -132,13 +151,21 @@ public class ArrayAndArrayList {
         }
         System.out.println(list);
 
+
+        HashSet<Integer> set1 = new HashSet<>(list);
+
+        //System.out.println("Before duplicate removed: " + list);
+        System.out.println("After duplicate removed: " + set1);
+
+
+
     }
 
     @Test
     public void validateArrayListHasData() {
-        ArrayList<Integer> list = new ArrayList<>(Arrays.asList(1, 2, 3, 3, 4, 4, 5, 6, 7, 8, 9, 9, 13, 12, 6));
-
-        int value = 6;
+        ArrayList<Integer> list = new ArrayList<>(Arrays.asList(1, 2, 3, 3, 4, 4, 5, 7, 8, 9,6, 9, 13, 12, 6));
+        //ArrayList<Integer> list1 = new ArrayList<>();
+        /*int value = 6;
         Iterator<Integer> iterator = list.iterator();
         while (iterator.hasNext()) {
             int element = iterator.next();
@@ -147,11 +174,26 @@ public class ArrayAndArrayList {
                 break;
             }
         }
+        */
+
+
+        int value = 6;
+        for (int i=0; i<list.size();i++) {
+            int element = list.get(i);
+            if (element == value) {
+                System.out.println("found value using loop " + value);
+                break;
+            }
+        }
+
 
         boolean number = list.contains(6);
+        System.out.println(number);
         if (number == true) {
             System.out.println("found value " + value);
         }
+
+        System.out.println(list.contains(6));
 
     }
 
@@ -161,6 +203,7 @@ public class ArrayAndArrayList {
 
         int max = Collections.max(list);
         int min = Collections.min(list);
+
 
         System.out.println(max);
         System.out.println(min);
@@ -176,6 +219,10 @@ public class ArrayAndArrayList {
         } else {
             System.out.println("list is not empty");
         }
+
+        System.out.println(list.isEmpty());
     }
 
 }
+
+

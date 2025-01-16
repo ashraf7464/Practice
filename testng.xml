@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <test verbose="2" preserve-order="true" name="C:/Users/conne/IdeaProjects/Practice">
+        <classes>
+            <class name="Practice.ArrayAndArrayList">
+            <methods>
+                <include name="array"/>
+                <include name="arrayToArrayList"/>
+                <include name="evenAndOddNumber"/>
+                <include name="sumAndAvg"/>
+                <include name="addAndRemove"/>
+                <include name="removeDuplicate"/>
+                <include name="validateArrayListHasData"/>
+                <include name="maxAndMin"/>
+                <include name="emptyList"/>
+            </methods>
+            </class>
+            <class name="Practice.DynamicSelect"><methods><include name="dynamicSelect"/><include name="dynamicSelect2"/></methods></class><class name="Practice.ExcelDataReaderPrac"><methods><include name="excelDataReaderTest"/></methods></class><class name="Practice.GetSeventhRowValueFromWebTable"><methods><include name="getRowGetValue"/></methods></class><class name="Practice.InterfaceSub"><methods><include name="getOrder"/></methods></class><class name="Practice.MouseKeyboardActions"><methods><include name="mouseHover"/><include name="pressKeys"/></methods></class><class name="Practice.MoveFile"><methods><include name="moveFile"/></methods></class><class name="Practice.Practice"><methods><include name="screenshot"/><include name="takeScreenshotOnFailure"/><include name="maxNumber"/><include name="validateArrayListHasData"/></methods></class><class name="Practice.ScreenshotAndScroll"><methods><include name="tryCaptureScreenshot"/><include name="scrollHeightPrac"/><include name="scrollByNumberPrac"/><include name="scrollIntoViewPrac"/></methods></class><class name="Practice.ScreenshotDemo"><methods><include name="takeScreenshot"/></methods></class><class name="Practice.SelectClassDemo"><methods><include name="selectDemo"/></methods></class><class name="Practice.StringAdvance"><methods><include name="reverseStringWithCollections"/></methods></class><class name="Practice.StringBuilderBuffer"><methods><include name="fourthLetter"/><include name="append"/><include name="insert"/><include name="replace"/><include name="delete"/><include name="reverse"/><include name="reverseWords"/><include name="reverseWordAndEachWord"/><include name="toStringMethod"/></methods></class><class name="Practice.StringFunction"><methods><include name="upperCaseLowerCase"/><include name="charOccurrences"/><include name="charOccurrences1"/><include name="splitString"/><include name="StringToInteger"/><include name="purseInteger"/><include name="purseString"/><include name="integerToString"/><include name="reverseStringWithLoop"/><include name="subString"/><include name="replace"/><include name="palindrome"/><include name="pyramid"/><include name="reversePyramid"/><include name="fibonacci"/><include name="stringHasVowels"/></methods></class><class name="Practice.StringIsImutable"><methods><include name="test"/></methods></class><class name="Practice.UprightClassPractice"><methods><include name="arrayDemo"/><include name="arrayListDemo"/><include name="maxNumber"/><include name="secondMaxNumber"/></methods></class><class name="Practice.WindowHandleDemo"><methods><include name="goToURL"/><include name="openNewWindow"/><include name="getWindowHandles"/><include name="newWindow"/><include name="moveToPrimaryWindow"/></methods></class><class name="Practice.iFrameDemo"><methods><include name="goToURL"/><include name="getIFrame"/></methods></class></classes></test></suite>

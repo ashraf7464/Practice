@@ -14,7 +14,7 @@ public class MouseKeyboardActions extends BaseClass {
     public void mouseHover() throws InterruptedException {
 
         driver.manage().window().maximize();
-        driver.get("https://www.rahulshettyacademy.com/AutomationPractice/");
+        driver.get("https://rahulshettyacademy.com/AutomationPractice/");
 
 
         WebElement mouseHoverButton = driver.findElement(By.xpath("//button[@id='mousehover']"));
@@ -34,7 +34,7 @@ public class MouseKeyboardActions extends BaseClass {
 
     }
 
-    @Test()
+    @Test( )
     public void pressKeys() throws InterruptedException {
         driver.get("https://www.saucedemo.com/v1/");
         driver.manage().window().maximize();

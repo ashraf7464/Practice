@@ -26,6 +26,13 @@ public class CommonUtilities {
         FileUtils.copyFile(screenshotFile, new File("C:\\Users\\conne\\IdeaProjects\\Practice\\src\\test\\ScreenShots"+fileName+timeStamp+".png"));
     }
 
+    public void screenshot1() throws IOException {
+
+
+        File screenshotFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
+        FileUtils.copyFile(screenshotFile, new File("C:\\Users\\conne\\IdeaProjects\\Practice\\src\\test\\ScreenShots"+"amazon.png"));
+    }
+
 
     public void elementToBeClickable(WebDriver driver, int waitTime, WebElement element){
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(waitTime));

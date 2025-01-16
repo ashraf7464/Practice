@@ -24,7 +24,12 @@ public class SelectClassDemo extends BaseClass {
         List<WebElement> options = select.getOptions();
 
         for(int i=0; i<options.size(); i++ ){
-            System.out.println(options.get(i).getText());
+            //System.out.println(options.get(i).getText());
+            if(options.get(i).getText().equalsIgnoreCase("Option3")){
+                options.get(i).click();
+                Thread.sleep(5000); 
+
+            }
         }
 
 

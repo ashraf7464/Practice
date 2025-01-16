@@ -14,4 +14,8 @@ public class InterfaceSub implements InterfaceSuper{
     public void getAccountBalance() {
 
     }
+
+    public void getNumber(){
+
+    }
 }

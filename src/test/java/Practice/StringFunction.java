@@ -29,10 +29,10 @@ public class StringFunction {
     @Test
     public void charOccurrences() {
         String name = "Md Ashraf Siddique";
-        String name1 = name.replace(" ", "").toLowerCase();
+        String name1 = name.replace(" ", "").toLowerCase(); //MdAshrafSiddique
         Set<Character> uniqueChars = new HashSet<>();
         for (char c : name1.toCharArray()) {
-
+                //System.out.println(c);
             if (!uniqueChars.contains(c)) {
                 uniqueChars.add(c);
                 int count = 0;
@@ -53,6 +53,7 @@ public class StringFunction {
         String name1 = name.replace(" ", "").toLowerCase();
         char [] chars = name1.toCharArray();
 
+        System.out.println(chars);
         Set<Character> uniqueChars = new HashSet<>();
         for (char c : chars) {
             if(!uniqueChars.contains(c)){
@@ -81,6 +82,7 @@ public class StringFunction {
 
     @Test
     public void StringToInteger(){
+        System.out.println(money+100);
         int a = Integer.parseInt(money);
         System.out.println(a+100);
     }
@@ -88,10 +90,13 @@ public class StringFunction {
     @Test
     public void purseInteger(){
         String str = "MD87ASH56RAF123";
+
         String intValue = str.replaceAll("[^0-9]","");
-        System.out.println(intValue);
+
+        System.out.println(intValue+100);
         int result = Integer.parseInt(intValue);
         System.out.println(result);
+        System.out.println(result+100);
     }
 
     @Test
@@ -118,9 +123,6 @@ public class StringFunction {
         }
         System.out.println(reverse);
 
-        for(int i=name.length()-1; i>=0; i--){
-            System.out.print(name.charAt(i));
-        }
     }
 
     @Test
@@ -140,6 +142,7 @@ public class StringFunction {
         if(email.startsWith("c")){
             System.out.println("ok");
         }
+
     }
 
     @Test
@@ -206,6 +209,12 @@ public class StringFunction {
                 System.out.println(c+" is not a vowels");
             }
         }
+    }
+
+    @Test
+    public void fourthLetter(){
+        String fourthLetter = String.valueOf(name.charAt(3));
+        System.out.println(fourthLetter);
     }
 
 }

@@ -14,14 +14,14 @@ public class HomeWork {
     public WebDriver driver;
 
     public void driverInit(){
-//        WebDriverManager.edgedriver().setup();
-//        EdgeOptions option = new EdgeOptions();
-//        option.addArguments("--guest");
-//        driver = new EdgeDriver();
-//        //driver.manage().window().maximize();
-
-        System.setProperty("webdriver.edge.driver", "D:\\msedgedriver.exe");
+        WebDriverManager.edgedriver().setup();
+        EdgeOptions option = new EdgeOptions();
+        option.addArguments("--guest");
         driver = new EdgeDriver();
+        driver.manage().window().maximize();////
+
+        //System.setProperty("webdriver.edge.driver", "D:\\msedgedriver.exe");
+        //driver = new EdgeDriver();
     }
 
     public void navigateToURL(){

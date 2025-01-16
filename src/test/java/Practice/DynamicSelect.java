@@ -20,7 +20,7 @@ public class DynamicSelect extends BaseClass {
 
 
         driver.manage().window().maximize();
-        driver.get("https://www.rahulshettyacademy.com/AutomationPractice/");
+        driver.get("https://rahulshettyacademy.com/AutomationPractice/");
 
       WebElement dropDown = driver.findElement(By.xpath("//input[@id='autocomplete']"));
         dropDown.sendKeys("uni");

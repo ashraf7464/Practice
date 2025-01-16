@@ -13,6 +13,7 @@ public class ScreenshotDemo extends BaseClass {
         Thread.sleep(1000);
         screenshot("Amazon");
         screenshot("xyz");
+
     }
 
 
