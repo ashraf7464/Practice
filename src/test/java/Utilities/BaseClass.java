@@ -31,6 +31,7 @@ public class BaseClass extends CommonUtilities{
 
         driver.close();
         // This is new line
+        // This another line
 
 
     }
