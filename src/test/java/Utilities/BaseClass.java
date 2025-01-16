@@ -30,8 +30,7 @@ public class BaseClass extends CommonUtilities{
     public void tearDown(){
 
         driver.close();
-        // This is new line
-        // This another line
+        // New Lines Added by Duke
 
 
     }
